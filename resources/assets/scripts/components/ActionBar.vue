@@ -1,6 +1,5 @@
 <template>
     <div>
-        <p class="todays-date d-block mr-lg-auto text-center text-md-left text-white m-0 px-1 no-break">{{ date }}</p>
         <button @click="$root.toggleSearchBox" 
             :class="{
                 'd-lg-none btn btn-sm': true,
@@ -55,6 +54,6 @@
 </template>
 <script>
 export default {
-    props: ['date', 'mainNav']
+    props: ['mainNav']
 }
 </script>

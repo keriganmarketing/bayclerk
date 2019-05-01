@@ -1,6 +1,11 @@
-<div class="button-gallery bg-dark py-3 sizeable">
+<div class="button-gallery d-flex align-items-center py-5 sizeable position-absolute w-100">
     <div class="container">
         <div class="row d-flex justify-content-center px-lg-4 px-xl-5 ">
+            <div class="col-12 d-flex justify-content-center">
+                <div class="search-box py-2">
+                    {{ get_search_form() }}
+                </div>
+            </div>
             <div class="col-md-4 col-lg-3 box-button records-search py-1 py-md-3 sizeable-element">
                 <a class="d-flex flex-md-column justify-content-md-center align-items-center text-md-center p-2 py-md-4" href="/record-search/">
                     <img src="/themes/wordplate/assets/images/records-search-icon.png" class="img-fluid py-1 px-2" alt="records search icon" aria-hidden="true">

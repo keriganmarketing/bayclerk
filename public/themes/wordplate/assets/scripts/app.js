@@ -1909,10 +1909,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['date', 'mainNav']
+    props: ['mainNav']
 });
 
 /***/ }),
@@ -17522,15 +17521,6 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c(
-      "p",
-      {
-        staticClass:
-          "todays-date d-block mr-lg-auto text-center text-md-left text-white m-0 px-1 no-break"
-      },
-      [_vm._v(_vm._s(_vm.date))]
-    ),
-    _vm._v(" "),
     _c(
       "button",
       {

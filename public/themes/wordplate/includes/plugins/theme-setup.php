@@ -82,6 +82,21 @@ function create_default_menus(){
         $locations['mobile-navigation'] = $menu_id;
     }
 
+    // Create How Do I Menu
+    $howdoimenu = 'How Do I Navigation';    
+    if( !wp_get_nav_menu_object($howdoimenu) ){
+        wp_create_nav_menu($howdoimenu);
+        $menu_id = get_term_by( 'name', $howdoimenu, 'nav_menu' );
+        add_page_to_menu( $menu_id, 'Apply For', '' );
+        add_page_to_menu( $menu_id, 'Bid On', '' );
+        add_page_to_menu( $menu_id, 'File', '' );
+        add_page_to_menu( $menu_id, 'Pay', '' );
+        add_page_to_menu( $menu_id, 'Look Up', '' );
+        add_page_to_menu( $menu_id, 'Contact', '' );
+
+        $locations['how-do-i-navigation'] = $menu_id;
+    }
+
     // Set Menu Locations
     if(!empty($locations)) { 
         foreach($locations as $locationId => $menuValue) { 
@@ -94,6 +109,9 @@ function create_default_menus(){
                     break; 
                 case 'mobile-navigation': 
                     $menu = get_term_by('name', 'Mobile Navigation', 'nav_menu'); 
+                    break; 
+                case 'how-do-i-navigation': 
+                    $menu = get_term_by('name', 'How Do I Navigation', 'nav_menu'); 
                     break; 
             } 
             

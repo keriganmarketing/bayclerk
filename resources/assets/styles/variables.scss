@@ -39,14 +39,15 @@ $indigo:  #6610f2;
 $purple:  #452f4a;
 $pink:    #e83e8c;
 $red:     #dc3545;
-$orange:  #fd7e14;
+$orange:  #d59f0f;
 $yellow:  #ffc107;
 $moss:    #627932;
 $green:   #3f824a;
 $teal:    #008481;
 $cyan:    #23789b;
-$navy:    #152f4e;
-$brown:   #5f534a;
+$dblue:   #133a60;
+$navy:    #003060;
+$brown:   #946f0a;
 
 $colors: ();
 $colors: map-merge((
@@ -68,19 +69,21 @@ $colors: map-merge((
   "gray-dark":  $gray-800
 ), $colors);
 
-$primary:       $teal;
-$secondary:     $navy;
+$primary:       $navy;
+$secondary:     $brown;
+$accent:        $orange;
 $success:       $green;
-$info:          $brown;
-$warning:       $moss;
+$info:          $dblue;
+$warning:       $yellow;
 $danger:        $red;
-$light:         #95cfce;
-$dark:          #305365;
+$light:         #f3f3f3;
+$dark:          #06233f;
 
 $theme-colors: ();
 $theme-colors: map-merge((
   "primary":    $primary,
   "secondary":  $secondary,
+  "accent":     $accent,
   "success":    $success,
   "info":       $info,
   "warning":    $warning,

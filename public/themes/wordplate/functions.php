@@ -11,25 +11,25 @@ require template_path('includes/plugins/acf-page-fields.php');
 require template_path('post-types/foreclosure.php');
 require template_path('post-types/tax-deed-sale.php');
 
-// (new ContactInfo())->addField([
-//     'key' => 'mailing_address',
-//     'label' => 'Mailing Address',
-//     'name' => 'mailing_address',
-//     'type' => 'wysiwyg',
-//     'parent' => 'group_contact_info',
-// ])->addField([
-//     'key' => 'psj_location',
-//     'label' => 'Port St. Joe Location',
-//     'name' => 'psj_location',
-//     'type' => 'wysiwyg',
-//     'parent' => 'group_contact_info',
-// ])->addField([
-//     'key' => 'wewa_location',
-//     'label' => 'Wewahitchka Location',
-//     'name' => 'wewa_location',
-//     'type' => 'wysiwyg',
-//     'parent' => 'group_contact_info',
-// ])->use();
+(new ContactInfo())->addField([
+    'key' => 'mailing_address',
+    'label' => 'Mailing Address',
+    'name' => 'mailing_address',
+    'type' => 'wysiwyg',
+    'parent' => 'group_contact_info',
+])->addField([
+    'key' => 'psj_location',
+    'label' => 'Port St. Joe Location',
+    'name' => 'psj_location',
+    'type' => 'wysiwyg',
+    'parent' => 'group_contact_info',
+])->addField([
+    'key' => 'wewa_location',
+    'label' => 'Wewahitchka Location',
+    'name' => 'wewa_location',
+    'type' => 'wysiwyg',
+    'parent' => 'group_contact_info',
+])->use();
 
 new KeriganSolutions\KMASlider\KMASliderModule();
 
