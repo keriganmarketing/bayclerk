@@ -11,10 +11,7 @@
             <div class="container">
 
                 <div class="row align-items-center justify-content-center py-5">
-                    <div class="col-md-3 col-lg-2 text-center">
-                        <img src="{{ $clerkPhoto['url'] }}" alt="{{ $clerkPhoto['alt'] }}" >
-                    </div>
-                    <div class="col-md-9">
+                    <div class="col-lg-10">
                         <article class="front">
                             <div class="content-area pl-md-4">
                                 {{ the_content() }}
