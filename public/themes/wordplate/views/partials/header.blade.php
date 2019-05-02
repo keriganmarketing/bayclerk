@@ -14,9 +14,9 @@
         <div class="container">
             <div class="d-md-flex nav-container">
                 <div class="brand w-auto d-flex justify-content-center align-items-center" >
-                    <img src="https://via.placeholder.com/110x130" alt="" class="clerk-photo" >
+                    <img src="/themes/wordplate/assets/images/clerk-photo.jpg" alt="Bill Kinsaul, Clerk of Court and Comptroller" class="clerk-photo" >
                     <div class="px-4 py-2">
-                        <img src="https://via.placeholder.com/200x70" alt="" class="logo" >
+                        <img src="/themes/wordplate/assets/images/clerk-logo.png" alt="" class="logo" >
                     </div>
                 </div>
                 <div role="navigation" class="topnav flex-wrap navbar navbar-expand-lg sizable bg-info flex-grow-1" >
@@ -33,7 +33,7 @@
     </div>
 </header>
 <div v-if="howDoIOpen" class="mobile-menu sizable" ref="howdoiMenuContainer" :class="{ 'open': howDoIOpen }" >
-    <div class="container d-none d-lg-block">
+    <div class="container d-none d-md-block">
         <mega-menu :main-nav="{{ website_menu('how-do-i-navigation') }}" ></mega-menu>
     </div>
 </div>

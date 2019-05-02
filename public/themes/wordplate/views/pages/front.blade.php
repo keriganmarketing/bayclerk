@@ -9,7 +9,7 @@
 
         <div class="button-gallery d-flex flex-column justify-content-center align-items-center sizeable w-100">
 
-            <div class="d-none d-lg-block search-box py-2">
+            <div class="d-none d-md-block search-box py-2">
                 {{ get_search_form() }}
             </div>
 

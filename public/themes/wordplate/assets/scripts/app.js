@@ -17763,7 +17763,9 @@ var render = function() {
       class: {
         scrolling: _vm.$root.isScrolling,
         "mobile-menu-open":
-          _vm.$root.mobileMenuOpen || _vm.$root.mobileHowDoIOpen,
+          _vm.$root.mobileMenuOpen ||
+          _vm.$root.mobileHowDoIOpen ||
+          _vm.$root.howDoIOpen,
         "full-height": _vm.$root.footerStuck,
         "text-normal": _vm.$root.textSize === 0,
         "text-large": _vm.$root.textSize === 1,

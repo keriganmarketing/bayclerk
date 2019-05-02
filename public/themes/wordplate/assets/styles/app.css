@@ -2949,8 +2949,8 @@ pre code {
 
 .container {
   width: 100%;
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-right: 3px;
+  padding-left: 3px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -2981,8 +2981,8 @@ pre code {
 
 .container-fluid {
   width: 100%;
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-right: 3px;
+  padding-left: 3px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -2992,8 +2992,8 @@ pre code {
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
-  margin-right: -5px;
-  margin-left: -5px;
+  margin-right: -3px;
+  margin-left: -3px;
 }
 
 .no-gutters {
@@ -3079,8 +3079,8 @@ pre code {
 .col-xl-auto {
   position: relative;
   width: 100%;
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-right: 3px;
+  padding-left: 3px;
 }
 
 .col {
@@ -7804,7 +7804,7 @@ input[type="button"].btn-block {
 }
 
 .card-deck .card {
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 @media (min-width: 576px) {
@@ -7812,8 +7812,8 @@ input[type="button"].btn-block {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
             flex-flow: row wrap;
-    margin-right: -5px;
-    margin-left: -5px;
+    margin-right: -3px;
+    margin-left: -3px;
   }
 
   .card-deck .card {
@@ -7825,9 +7825,9 @@ input[type="button"].btn-block {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
             flex-direction: column;
-    margin-right: 5px;
+    margin-right: 3px;
     margin-bottom: 0;
-    margin-left: 5px;
+    margin-left: 3px;
   }
 }
 
@@ -7841,7 +7841,7 @@ input[type="button"].btn-block {
 }
 
 .card-group > .card {
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 @media (min-width: 576px) {
@@ -14033,6 +14033,7 @@ body #app .site-wrapper.text-largest .navbar-nav {
   z-index: 6;
   width: 100%;
   overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .top .container {
@@ -14049,6 +14050,7 @@ body #app .site-wrapper.text-largest .navbar-nav {
 
 .top .brand .clerk-photo {
   width: 90px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 @media (min-width: 768px) {
@@ -14060,7 +14062,6 @@ body #app .site-wrapper.text-largest .navbar-nav {
 
 .top .brand .logo {
   width: 200px;
-  height: 70px;
 }
 
 .top .topnav {
@@ -14211,15 +14212,15 @@ body #app .site-wrapper.text-largest .navbar-nav {
   transition: height linear .5s;
 }
 
-.search-box #search-field {
-  height: 46px;
-}
-
 .search-box .search-form input {
   border-color: transparent !important;
   border: none !important;
   background-color: transparent !important;
   border-radius: 2rem 0 0 2rem !important;
+}
+
+.search-box .fa {
+  font-size: 22px;
 }
 
 .text-sizer {
@@ -14341,7 +14342,6 @@ body #app .site-wrapper.text-largest .navbar-nav {
   position: fixed;
   top: 0;
   left: 0;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .mobile-menu-open .top .topnav > div,
@@ -14452,7 +14452,7 @@ main .sidebar .child-page {
 
 .button-gallery {
   position: relative;
-  padding-top: 9rem;
+  padding-top: 9.5rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -14472,7 +14472,14 @@ main .sidebar .child-page {
 }
 
 .button-gallery .box-button {
-  font-size: 1.125rem;
+  margin-bottom: .2rem;
+  margin-top: .2rem;
+}
+
+@media screen and (min-width: 993px) {
+  .button-gallery .box-button.fifth {
+    width: 20%;
+  }
 }
 
 .button-gallery .box-button a {
@@ -14483,71 +14490,129 @@ main .sidebar .child-page {
   line-height: 1em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   font-size: inherit;
-}
-
-@media (min-width: 768px) {
-  .button-gallery .box-button a {
-    height: 184px;
-  }
+  height: 100%;
 }
 
 .button-gallery .box-button a span {
-  font-size: inherit;
+  font-size: .9em;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 }
 
-.button-gallery .box-button a small {
-  font-weight: 400;
-}
-
-@media (min-width: 768px) {
-  .button-gallery .box-button a small {
-    font-size: 67%;
-  }
-}
-
-.button-gallery .box-button a img {
-  width: 68px;
-  height: 58px;
-}
-
-@media (min-width: 768px) {
-  .button-gallery .box-button a img {
-    width: 87px;
-    height: auto;
-    margin-bottom: 10px;
-  }
+.button-gallery .box-button.case-search a {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#256c74+0,1c494f+100 */
+  background: #256c74;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#256c74), to(#1c494f));
+  background: linear-gradient(to bottom, #256c74 0%, #1c494f 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#256c74', endColorstr='#1c494f',GradientType=0 );
+  /* IE6-9 */
 }
 
 .button-gallery .box-button.records-search a {
-  background-color: #452f4a;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#702639+0,4f1c2f+100 */
+  background: #702639;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#702639), to(#4f1c2f));
+  background: linear-gradient(to bottom, #702639 0%, #4f1c2f 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#702639', endColorstr='#4f1c2f',GradientType=0 );
+  /* IE6-9 */
+}
+
+.button-gallery .box-button.make-payment a {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1d4f2f+0,1a3525+100 */
+  background: #1d4f2f;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#1d4f2f), to(#1a3525));
+  background: linear-gradient(to bottom, #1d4f2f 0%, #1a3525 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d4f2f', endColorstr='#1a3525',GradientType=0 );
+  /* IE6-9 */
 }
 
 .button-gallery .box-button.tax-deeds a {
-  background-color: #003060;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1d415a+0,152837+100 */
+  background: #1d415a;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#1d415a), to(#152837));
+  background: linear-gradient(to bottom, #1d415a 0%, #152837 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d415a', endColorstr='#152837',GradientType=0 );
+  /* IE6-9 */
 }
 
 .button-gallery .box-button.foreclosures a {
-  background-color: #627932;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#834e20+0,653d1b+100 */
+  background: #834e20;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#834e20), to(#653d1b));
+  background: linear-gradient(to bottom, #834e20 0%, #653d1b 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#834e20', endColorstr='#653d1b',GradientType=0 );
+  /* IE6-9 */
 }
 
-.button-gallery .box-button.forms a {
-  background-color: #3678c5;
+.button-gallery .box-button.courts a {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#152a3f+0,0b1927+100 */
+  background: #152a3f;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#152a3f), to(#0b1927));
+  background: linear-gradient(to bottom, #152a3f 0%, #0b1927 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#152a3f', endColorstr='#0b1927',GradientType=0 );
+  /* IE6-9 */
 }
 
-.button-gallery .box-button.e-file a {
-  background-color: #003060;
+.button-gallery .box-button.jury a {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#524038+0,372c28+100 */
+  background: #524038;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#524038), to(#372c28));
+  background: linear-gradient(to bottom, #524038 0%, #372c28 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#524038', endColorstr='#372c28',GradientType=0 );
+  /* IE6-9 */
 }
 
-.button-gallery .box-button.pay-online a {
-  background-color: #3f824a;
+.button-gallery .box-button.comptroller a {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#957a34+0,635224+100 */
+  background: #957a34;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#957a34), to(#635224));
+  background: linear-gradient(to bottom, #957a34 0%, #635224 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#957a34', endColorstr='#635224',GradientType=0 );
+  /* IE6-9 */
 }
 
 .button-gallery .box-button.marriage a {
-  background-color: #23789b;
-}
-
-.button-gallery .box-button.passports a {
-  background-color: #946f0a;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#491d59+0,2f1837+100 */
+  background: #491d59;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#491d59), to(#2f1837));
+  background: linear-gradient(to bottom, #491d59 0%, #2f1837 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#491d59', endColorstr='#2f1837',GradientType=0 );
+  /* IE6-9 */
 }
 
 .clickdown {
