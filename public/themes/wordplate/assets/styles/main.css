@@ -14288,6 +14288,7 @@ body #app .site-wrapper.text-largest .navbar-nav {
   top: 0;
   padding-top: 180px;
   padding-bottom: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (min-width: 667px) {
@@ -14327,6 +14328,20 @@ body #app .site-wrapper.text-largest .navbar-nav {
   border-radius: 0;
 }
 
+.mast {
+  padding-top: 11rem;
+}
+
+@media screen and (min-width: 768px) {
+  .mast {
+    padding-top: 1.7rem;
+  }
+}
+
+.mast .breadcrumbs {
+  font-size: .9em;
+}
+
 .mobile-menu-open .top .brand,
 .scrolling .top .brand {
   display: none !important;
@@ -14359,6 +14374,11 @@ body #app .site-wrapper.text-largest .navbar-nav {
 .mobile-menu-open .mobile-menu.open,
 .scrolling .mobile-menu.open {
   padding-top: 80px !important;
+}
+
+.mobile-menu-open .mast,
+.scrolling .mast {
+  padding-top: 4rem;
 }
 
 main {

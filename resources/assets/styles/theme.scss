@@ -398,6 +398,7 @@ body {
         top: 0;
         padding-top: 180px;
         padding-bottom: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,.5);
 
         @media screen and (min-width: 667px){
             height: auto;
@@ -436,6 +437,18 @@ body {
     }
 }
 
+.mast {
+    padding-top: 11rem;
+
+    @media screen and (min-width: 768px){
+        padding-top: 1.7rem;
+    }
+
+    .breadcrumbs {
+        font-size: .9em;
+    }
+}
+
 .mobile-menu-open,
 .scrolling {
     .top {
@@ -466,6 +479,10 @@ body {
         &.open {
             padding-top: 80px !important;
         }
+    }
+
+    .mast {
+        padding-top: 4rem;
     }
 }
 
