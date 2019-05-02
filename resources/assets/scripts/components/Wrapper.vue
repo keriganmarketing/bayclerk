@@ -4,7 +4,8 @@
         class="site-wrapper"
         :class="{
             'scrolling': $root.isScrolling,
-            'mobile-menu-open': $root.mobileMenuOpen,
+            'mobile-menu-open': $root.mobileMenuOpen || $root.mobileHowDoIOpen,
+            'full-height' : $root.footerStuck,
             'text-normal': $root.textSize === 0,
             'text-large': $root.textSize === 1,
             'text-larger': $root.textSize === 2,

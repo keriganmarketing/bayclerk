@@ -14,6 +14,21 @@ require('./load-components')
 import {VueMasonryPlugin} from 'vue-masonry';
 Vue.use(VueMasonryPlugin)
 
+import vueScrollto from 'vue-scrollto'
+Vue.use(vueScrollto, {
+    container: "body",
+    duration: 1000,
+    easing: "ease",
+    offset: -140,
+    force: true,
+    cancelable: true,
+    onStart: false,
+    onDone: false,
+    onCancel: false,
+    x: false,
+    y: true
+})
+
 const app = new Vue({
     el: '#app',
 
@@ -23,6 +38,7 @@ const app = new Vue({
         windowWidth: 0,
         isScrolling: false,
         scrollPosition: 0,
+        footerStuck: false,
         mobileMenuOpen: false,
         howDoIOpen: false,
         mobileHowDoIOpen: false,
@@ -39,6 +55,8 @@ const app = new Vue({
         handleResize() {
             this.windowWidth = window.innerWidth;
             this.windowHeight = window.innerHeight;
+
+            this.footerStuck = window.innerHeight > this.$root.$el.children[0].clientHeight;
         },
         toggleMenu() {
             if(this.mobileHowDoIOpen) this.mobileHowDoIOpen = false;
@@ -78,6 +96,9 @@ const app = new Vue({
     created () {
         window.addEventListener('scroll', this.handleScroll);
         window.addEventListener('resize', this.handleResize);
+    },
+
+    mounted () {
         this.handleScroll();
         this.handleResize();
     },

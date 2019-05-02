@@ -5,23 +5,21 @@
     @while (have_posts())
         {{ the_post() }}
                 
-        <kma-slider class="slider-container"></kma-slider>
-        @include('partials.buttongallery')
-        <main id="content" class="sizable">
-            <div class="container">
+        <kma-slider class="slider-container d-none d-md-block"></kma-slider>
 
-                <div class="row align-items-center justify-content-center py-5">
-                    <div class="col-lg-10">
-                        <article class="front">
-                            <div class="content-area pl-md-4">
-                                {{ the_content() }}
-                            </div>
-                        </article>
-                    </div>
-                </div>
+        <div class="button-gallery d-flex flex-column justify-content-center align-items-center sizeable w-100">
 
+            <div class="d-none d-lg-block search-box py-2">
+                {{ get_search_form() }}
             </div>
-        </main>
+
+            @include('partials.buttongallery')
+
+            <div id="main" class="clickdown justify-self-end">
+                <button class="clickdown-button" v-scroll-to="'#main'" ><i class="fa fa-chevron-down" aria-hidden="true" ></i></button>
+            </div>
+
+        </div>
 
     @endwhile
 @else

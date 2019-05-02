@@ -30,7 +30,8 @@
         "postcss-plugin": "^1.0.0",
         "sugarss": "^2.0.0",
         "vue": "^2.5.22",
-        "vue-masonry": "^0.11.7"
+        "vue-masonry": "^0.11.7",
+        "vue-scrollto": "^2.15.0"
     },
     "browserslist": [
         ">0.25%",
