@@ -14237,7 +14237,8 @@ body #app .site-wrapper.text-largest .navbar-nav {
 
 .text-sizer {
   margin-top: 140px;
-  z-index: 1;
+  z-index: 3;
+  position: relative;
 }
 
 .text-sizer .text-sizer-container {
@@ -14464,6 +14465,7 @@ main .sidebar .child-page {
 
 .button-gallery {
   position: relative;
+  z-index: 2;
   padding-top: 9.5rem;
 }
 
@@ -14650,6 +14652,11 @@ main .sidebar .child-page {
   position: absolute;
   margin-top: -36px;
   margin-left: -36px;
+}
+
+.mobile-announcements {
+  margin-top: 2rem;
+  margin-bottom: -1.8rem;
 }
 
 footer a {

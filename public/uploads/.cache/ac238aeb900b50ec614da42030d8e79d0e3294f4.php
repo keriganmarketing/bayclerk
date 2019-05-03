@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="row justify-content-md-end text-center">
                     <div class="col col-md-auto text-white flex-grow-lg-1 border-right border-info text-lg-right">
-                        <span class="date d-block h-100">{{ date('F j, Y') }}</span>
+                        <span class="date d-block h-100"><?php echo e(date('F j, Y')); ?></span>
                     </div>
                     <a class="col-auto col-md-auto text-white border-right border-info" href="#" >E-FILE</a>
                     <a class="col col-md-auto text-white" href="#" >E-RECORDING</a>
@@ -22,7 +22,7 @@
                 <div role="navigation" class="topnav flex-wrap navbar navbar-expand-lg sizable bg-info flex-grow-1" >
                     <action-bar  
                         class="d-flex w-100 justify-content-md-end p-md-2"
-                        :main-nav="{{ website_menu('main-navigation') }}" 
+                        :main-nav="<?php echo e(website_menu('main-navigation')); ?>" 
                     ></action-bar>
                 </div>
             </div>
@@ -34,14 +34,14 @@
 </header>
 <div v-if="howDoIOpen" class="mobile-menu sizable" ref="howdoiMenuContainer" :class="{ 'open': howDoIOpen }" >
     <div class="container d-none d-md-block">
-        <mega-menu :main-nav="{{ website_menu('how-do-i-navigation') }}" ></mega-menu>
+        <mega-menu :main-nav="<?php echo e(website_menu('how-do-i-navigation')); ?>" ></mega-menu>
     </div>
 </div>
 <div v-if="mobileHowDoIOpen" class="mobile-menu" ref="howdoiMenuContainer" :class="{ 'open': mobileHowDoIOpen }" >
-    <mobile-menu :mobile-nav="{{ website_menu('how-do-i-navigation') }}" class="navbar-nav" ></mobile-menu>
+    <mobile-menu :mobile-nav="<?php echo e(website_menu('how-do-i-navigation')); ?>" class="navbar-nav" ></mobile-menu>
 </div>
 <div id="mobilemenu" v-if="mobileMenuOpen" class="mobile-menu" ref="mobileMenuContainer" :class="{ 'open': mobileMenuOpen }" >
-    <mobile-menu :mobile-nav="{{ website_menu('mobile-navigation') }}" class="navbar-nav" ></mobile-menu>
+    <mobile-menu :mobile-nav="<?php echo e(website_menu('mobile-navigation')); ?>" class="navbar-nav" ></mobile-menu>
 </div>
 
 <div class="container">
@@ -49,4 +49,4 @@
     <text-sizer class="d-flex align-items-center p-2 text-sizer-container position-absolute"></text-sizer>
     </div>
 </div>
-                   
+                   <?php /**PATH C:\dev\bayclerk\public\themes\wordplate\views/partials/header.blade.php ENDPATH**/ ?>

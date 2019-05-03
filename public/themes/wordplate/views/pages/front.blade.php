@@ -13,10 +13,15 @@
                 {{ get_search_form() }}
             </div>
 
+            <div class="mobile-announcements bg-accent d-md-none pt-1 px-2">
+                @include('partials.announcements')
+            </div>
+
             @include('partials.buttongallery')
 
-            <div id="main" class="clickdown justify-self-end">
+            <div id="main" class="clickdown justify-self-end bg-accent">
                 <button class="clickdown-button" v-scroll-to="'#main'" ><i class="fa fa-chevron-down" aria-hidden="true" ></i></button>
+                @include('partials.announcements')
             </div>
 
         </div>

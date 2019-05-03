@@ -56,3 +56,4 @@
             </div>
         </div>
     </div>
+<?php /**PATH C:\dev\bayclerk\public\themes\wordplate\views/partials/buttongallery.blade.php ENDPATH**/ ?>

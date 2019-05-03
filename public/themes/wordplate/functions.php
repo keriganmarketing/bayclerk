@@ -18,15 +18,15 @@ require template_path('post-types/tax-deed-sale.php');
     'type' => 'wysiwyg',
     'parent' => 'group_contact_info',
 ])->addField([
-    'key' => 'psj_location',
-    'label' => 'Port St. Joe Location',
-    'name' => 'psj_location',
+    'key' => 'contact_info',
+    'label' => 'Contact Info',
+    'name' => 'contact_info',
     'type' => 'wysiwyg',
     'parent' => 'group_contact_info',
 ])->addField([
-    'key' => 'wewa_location',
-    'label' => 'Wewahitchka Location',
-    'name' => 'wewa_location',
+    'key' => 'hours_info',
+    'label' => 'Hours',
+    'name' => 'hours_info',
     'type' => 'wysiwyg',
     'parent' => 'group_contact_info',
 ])->use();
