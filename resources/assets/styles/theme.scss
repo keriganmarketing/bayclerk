@@ -335,19 +335,17 @@ body {
 .search-box {
     height: 80px;
     transition: height linear .5s;
-    
-    .search-form {
-        input {
-            border-color: transparent !important;
-            border: none !important;
-            background-color: transparent !important;
-            border-radius: 2rem 0 0 2rem !important;
-        }
-    }
 
     .fa {
         font-size: 22px;
     }
+}
+
+#search-field {
+    border-color: transparent !important;
+    border: none !important;
+    background-color: transparent !important;
+    border-radius: 2rem 0 0 2rem !important;
 }
 
 .text-sizer {

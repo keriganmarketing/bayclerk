@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
+@include('partials.mast')
 <main id="content" class="sizable">
     <div class="container">
         <article class="support">
@@ -17,7 +18,8 @@
             @endforeach
         @else
             <article>
-                <p>Nothing was found using the requested search criteria.</p>
+                <p>Nothing was found using the requested search criteria. Search again?</p>
+                {{ get_search_form() }}
             </article>
         @endif
     </div>
