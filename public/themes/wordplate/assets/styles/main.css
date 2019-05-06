@@ -14362,6 +14362,7 @@ body #app .site-wrapper.text-largest .navbar-nav {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 30;
 }
 
 .scrolling .top .topnav > div {

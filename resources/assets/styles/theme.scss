@@ -469,6 +469,7 @@ body {
             width: 100%;
             position: fixed;
             top: 0; left: 0;
+            z-index: 30;
 
             & > div {
                 width: 1140px !important;
