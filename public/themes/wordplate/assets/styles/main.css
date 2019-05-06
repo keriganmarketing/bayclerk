@@ -14042,7 +14042,7 @@ body #app .site-wrapper.text-largest .navbar-nav {
   -webkit-transition: all .5s linear;
   transition: all .5s linear;
   position: absolute;
-  z-index: 6;
+  z-index: 30;
   width: 100%;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
