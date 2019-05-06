@@ -17678,7 +17678,10 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "form",
-      { staticClass: "form-inline", attrs: { role: "search", method: "get" } },
+      {
+        staticClass: "form-inline",
+        attrs: { role: "search", method: "get", action: "/search/" }
+      },
       [
         _c(
           "div",

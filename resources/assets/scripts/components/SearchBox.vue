@@ -1,5 +1,5 @@
 <template>
-    <form role="search" method="get" class="form-inline">
+    <form role="search" method="get" action="/search/" class="form-inline">
         <div class="input-group p-2 bg-white border-bottom border-primary"  style="width:100%;">
             <label class="sr-only" for="search-field">Search this website for:</label> 
             <input id="search-field" type="search" placeholder="" value="" name="search" class="form-control border-0">
