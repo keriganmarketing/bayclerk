@@ -155,3 +155,15 @@ function testimonial_shortcode( $atts ) {
     return $output;
 }
 add_shortcode( 'kma_testimonials', 'testimonial_shortcode' );
+
+/// Yoast SEO Breadcrumb
+add_theme_support( 'yoast-seo-breadcrumbs' );
+function shorten_yoast_breadcrumb_title($link_info)
+{
+    $limit = 5;
+    $link_info['text'] = wp_trim_words( $link_info['text'], $limit, '...' );
+
+    return $link_info;
+}
+
+add_filter('wpseo_breadcrumb_single_link_info', 'shorten_yoast_breadcrumb_title', 10);

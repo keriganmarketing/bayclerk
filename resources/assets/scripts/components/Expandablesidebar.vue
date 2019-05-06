@@ -8,7 +8,8 @@
                     :class="{'active':page.id == post.ID}"
                     v-html="page.title.rendered"
                 ></a>
-                <div v-if="page.children.length > 0" v-for="child in page.children" :key="child.id" >
+                <div v-if="page.children.length > 0" >
+                <div v-for="child in page.children" :key="child.id" >
                     <a 
                         :href="child.link" 
                         class="list-group-item list-group-item-action child-page sizeable-element"
@@ -16,6 +17,7 @@
                     >
                     <i class="fa fa-angle-up"></i> {{child.title.rendered}}
                     </a>
+                </div>
                 </div>
             </div>
         </div>
@@ -28,63 +30,53 @@ export default {
     data() {
         return {
             pages: [],
-            isLoaded: false
+            isLoaded: false,
         }
     },
 
     created() {
-        this.getSiblingPages();
+        this.getChildPages();
     },
 
     methods: {
-        getPages() {
-            axios.get("/wp-json/wp/v2/pages?orderby=menu_order&order=asc")
-                .then(response => {
-                    this.pages = response.data; 
-                });
-        },
-
         getChildPages() {
             axios.get("/wp-json/wp/v2/pages?parent=" + this.post.ID + "&orderby=menu_order&order=asc")
                 .then(response => {
-                    this.pages = response.data; 
+                    this.pages = response.data;
+
+                    Object.keys(this.pages).map((key) => {
+                        
+                        if(!this.pages[key].children){
+                            this.pages[key].children = [];
+                        };
+       
+                    })
+
+                    this.isLoaded = true;
+
+                    if(this.pages.length == 0){
+                        this.getSiblingPages();
+                    }
                 });
         },
 
         getSiblingPages() {
-            axios.get("/wp-json/wp/v2/pages?parent=" + this.post.post_parent + "&orderby=menu_order&order=asc")
+            axios.get("/wp-json/wp/v2/pages?parent=" + this.post.post_parent + "&orderby=menu_order&order=asc&per_page=30&exclude=3,24,30,32,34,36,38")
                 .then(response => {
-                    let data = response.data;
+                    this.pages = response.data;
 
-                    if(this.post.post_parent != 0){
-
-                    Object.keys(data).map((key) => {
+                    Object.keys(this.pages).map((key) => {
                         
-                        data[key].children = [];
-                        axios.get("/wp-json/wp/v2/pages?parent=" + data[key].id + "&orderby=menu_order&order=asc")
+                        this.pages[key].children = [];
+                        axios.get("/wp-json/wp/v2/pages?parent=" + this.pages[key].id + "&orderby=menu_order&order=asc")
                             .then(response => {
-                                data[key].children = response.data; 
+                                this.pages[key].children = response.data; 
                             });
                     })
 
-                    }
-
-                    this.pages = data; 
                     this.isLoaded = true;
                 
                 });
-        },
-
-        getSubPages() {
-            Object.keys(this.pages).map((key) => {
-                
-                this.pages[key].children = [];
-                http.get("/wp-json/wp/v2/pages?parent=" + this.pages[key].id + "&orderby=menu_order&order=asc")
-                    .then(response => {
-                        console.log(response.data);
-                        this.pages[key].children = response.data; 
-                    });
-            })
         }
     }
 }

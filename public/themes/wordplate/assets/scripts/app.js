@@ -1956,6 +1956,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['post'],
@@ -1967,56 +1969,46 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         };
     },
     created: function created() {
-        this.getSiblingPages();
+        this.getChildPages();
     },
 
 
     methods: {
-        getPages: function getPages() {
+        getChildPages: function getChildPages() {
             var _this = this;
 
-            axios.get("/wp-json/wp/v2/pages?orderby=menu_order&order=asc").then(function (response) {
-                _this.pages = response.data;
-            });
-        },
-        getChildPages: function getChildPages() {
-            var _this2 = this;
-
             axios.get("/wp-json/wp/v2/pages?parent=" + this.post.ID + "&orderby=menu_order&order=asc").then(function (response) {
-                _this2.pages = response.data;
+                _this.pages = response.data;
+
+                Object.keys(_this.pages).map(function (key) {
+
+                    if (!_this.pages[key].children) {
+                        _this.pages[key].children = [];
+                    };
+                });
+
+                _this.isLoaded = true;
+
+                if (_this.pages.length == 0) {
+                    _this.getSiblingPages();
+                }
             });
         },
         getSiblingPages: function getSiblingPages() {
-            var _this3 = this;
+            var _this2 = this;
 
-            axios.get("/wp-json/wp/v2/pages?parent=" + this.post.post_parent + "&orderby=menu_order&order=asc").then(function (response) {
-                var data = response.data;
+            axios.get("/wp-json/wp/v2/pages?parent=" + this.post.post_parent + "&orderby=menu_order&order=asc&per_page=30&exclude=3,24,30,32,34,36,38").then(function (response) {
+                _this2.pages = response.data;
 
-                if (_this3.post.post_parent != 0) {
+                Object.keys(_this2.pages).map(function (key) {
 
-                    Object.keys(data).map(function (key) {
-
-                        data[key].children = [];
-                        axios.get("/wp-json/wp/v2/pages?parent=" + data[key].id + "&orderby=menu_order&order=asc").then(function (response) {
-                            data[key].children = response.data;
-                        });
+                    _this2.pages[key].children = [];
+                    axios.get("/wp-json/wp/v2/pages?parent=" + _this2.pages[key].id + "&orderby=menu_order&order=asc").then(function (response) {
+                        _this2.pages[key].children = response.data;
                     });
-                }
-
-                _this3.pages = data;
-                _this3.isLoaded = true;
-            });
-        },
-        getSubPages: function getSubPages() {
-            var _this4 = this;
-
-            Object.keys(this.pages).map(function (key) {
-
-                _this4.pages[key].children = [];
-                http.get("/wp-json/wp/v2/pages?parent=" + _this4.pages[key].id + "&orderby=menu_order&order=asc").then(function (response) {
-                    console.log(response.data);
-                    _this4.pages[key].children = response.data;
                 });
+
+                _this2.isLoaded = true;
             });
         }
     }
@@ -17803,21 +17795,20 @@ var render = function() {
           "div",
           { staticClass: "list-group list-group-flush" },
           _vm._l(_vm.pages, function(page) {
-            return _c(
-              "div",
-              { key: page.id },
-              [
-                _c("a", {
-                  staticClass:
-                    "list-group-item list-group-item-action sizeable-element",
-                  class: { active: page.id == _vm.post.ID },
-                  attrs: { href: page.link },
-                  domProps: { innerHTML: _vm._s(page.title.rendered) }
-                }),
-                _vm._v(" "),
-                _vm._l(page.children, function(child) {
-                  return page.children.length > 0
-                    ? _c("div", { key: child.id }, [
+            return _c("div", { key: page.id }, [
+              _c("a", {
+                staticClass:
+                  "list-group-item list-group-item-action sizeable-element",
+                class: { active: page.id == _vm.post.ID },
+                attrs: { href: page.link },
+                domProps: { innerHTML: _vm._s(page.title.rendered) }
+              }),
+              _vm._v(" "),
+              page.children.length > 0
+                ? _c(
+                    "div",
+                    _vm._l(page.children, function(child) {
+                      return _c("div", { key: child.id }, [
                         _c(
                           "a",
                           {
@@ -17836,11 +17827,11 @@ var render = function() {
                           ]
                         )
                       ])
-                    : _vm._e()
-                })
-              ],
-              2
-            )
+                    }),
+                    0
+                  )
+                : _vm._e()
+            ])
           }),
           0
         )
