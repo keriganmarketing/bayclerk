@@ -2003,9 +2003,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 Object.keys(_this2.pages).map(function (key) {
 
                     _this2.pages[key].children = [];
-                    axios.get("/wp-json/wp/v2/pages?parent=" + _this2.pages[key].id + "&orderby=menu_order&order=asc").then(function (response) {
-                        _this2.pages[key].children = response.data;
-                    });
+                    // axios.get("/wp-json/wp/v2/pages?parent=" + this.pages[key].id + "&orderby=menu_order&order=asc")
+                    //     .then(response => {
+                    //         this.pages[key].children = response.data; 
+                    //     });
                 });
 
                 _this2.isLoaded = true;

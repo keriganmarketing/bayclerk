@@ -68,10 +68,10 @@ export default {
                     Object.keys(this.pages).map((key) => {
                         
                         this.pages[key].children = [];
-                        axios.get("/wp-json/wp/v2/pages?parent=" + this.pages[key].id + "&orderby=menu_order&order=asc")
-                            .then(response => {
-                                this.pages[key].children = response.data; 
-                            });
+                        // axios.get("/wp-json/wp/v2/pages?parent=" + this.pages[key].id + "&orderby=menu_order&order=asc")
+                        //     .then(response => {
+                        //         this.pages[key].children = response.data; 
+                        //     });
                     })
 
                     this.isLoaded = true;
