@@ -50,7 +50,7 @@ const app = new Vue({
     methods: {
         handleScroll () {
             this.scrollPosition = window.scrollY;
-            this.isScrolling = this.scrollPosition > 40;
+            this.isScrolling = this.scrollPosition > 10;
         },
         handleResize() {
             this.windowWidth = window.innerWidth;

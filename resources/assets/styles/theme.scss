@@ -461,27 +461,39 @@ body {
 
 .scrolling {
     .top {
+        width: 100%;
+        position: fixed;
+        top: 0; left: 0;
+        z-index: 30;
 
-        .brand {
+        .top-container {
             display: none !important;
         }
-        .topnav {
-            width: 100%;
-            position: fixed;
-            top: 0; left: 0;
-            z-index: 30;
 
-            & > div {
-                width: 1140px !important;
-                margin: auto;
-                max-width: 100%;
-                background-color: $primary;
+        .brand {
+            img {
+                height: 50px !important;
+                width: auto !important;
+                margin: 0 !important;
+            }
 
-                @media screen and (min-width: 768px){
-                    background-color: $info;
-                }
+            @media screen and (max-width: 767px){
+                display: none !important;
             }
         }
+        
+        // .topnav {
+        //     & > div {
+        //         width: 1140px !important;
+        //         margin: auto;
+        //         max-width: 100%;
+        //         background-color: $primary;
+
+        //         @media screen and (min-width: 768px){
+        //             background-color: $info;
+        //         }
+        //     }
+        // }
     }
 
     .mobile-menu {

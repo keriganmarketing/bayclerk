@@ -14353,11 +14353,7 @@ body #app .site-wrapper.text-largest .navbar-nav {
   font-weight: bold;
 }
 
-.scrolling .top .brand {
-  display: none !important;
-}
-
-.scrolling .top .topnav {
+.scrolling .top {
   width: 100%;
   position: fixed;
   top: 0;
@@ -14365,16 +14361,19 @@ body #app .site-wrapper.text-largest .navbar-nav {
   z-index: 30;
 }
 
-.scrolling .top .topnav > div {
-  width: 1140px !important;
-  margin: auto;
-  max-width: 100%;
-  background-color: #003060;
+.scrolling .top .top-container {
+  display: none !important;
 }
 
-@media screen and (min-width: 768px) {
-  .scrolling .top .topnav > div {
-    background-color: #133a60;
+.scrolling .top .brand img {
+  height: 50px !important;
+  width: auto !important;
+  margin: 0 !important;
+}
+
+@media screen and (max-width: 767px) {
+  .scrolling .top .brand {
+    display: none !important;
   }
 }
 
