@@ -14394,6 +14394,10 @@ main article a {
   text-decoration: underline;
 }
 
+main .fee-table th td:nth-child(2) {
+  text-align: right;
+}
+
 main article {
   padding: 2rem 1rem 1rem;
   text-align: left;
@@ -14422,14 +14426,6 @@ main article h3 {
 
 main article table .column-one {
   width: 180px;
-}
-
-main article table.fee-table {
-  border: 1px solid #dee2e6;
-}
-
-main article table.fee-table th td:nth-child(2) {
-  text-align: right;
 }
 
 main .sidebar {
