@@ -545,6 +545,14 @@ main {
             .column-one {
                 width: 180px;
             }
+
+            &.fee-table {
+                border: 1px solid $gray-300;
+
+                &:nth-child(2) {
+                    text-align: right;
+                }
+            }
         }
 
     }
