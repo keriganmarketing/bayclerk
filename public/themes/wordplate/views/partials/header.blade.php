@@ -6,7 +6,7 @@
                     <div class="col col-md-auto text-white flex-grow-lg-1 border-right border-info text-lg-right">
                         <span class="date d-block h-100">{{ date('F j, Y') }}</span>
                     </div>
-                    <a class="col-auto col-md-auto text-white border-right border-info" href="#" >E-FILE</a>
+                    <a class="col-auto col-md-auto text-white border-right border-info" href="https://www.myflcourtaccess.com/" >E-FILE</a>
                     <a class="col col-md-auto text-white" href="#" >E-RECORDING</a>
                 </div>
             </div>
