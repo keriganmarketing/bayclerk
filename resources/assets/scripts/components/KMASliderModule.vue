@@ -1,9 +1,6 @@
 <template>
     <div>
         <div class="slider">
-            <div class="slider-left icon" @click="clickPrev" >
-                <i class="fa fa-angle-left fa-3" aria-hidden="true" aria-label="previous"></i>
-            </div>
 
             <div class="slides" @mouseover="pauseSlide" @mouseleave="unpauseSlide">
                 <div
@@ -20,9 +17,6 @@
                 </div>
             </div>
 
-            <div class="slider-right icon" @click="clickNext" >
-                <i class="fa fa-angle-right fa-3" aria-hidden="true" aria-label="next"></i>
-            </div>
         </div>
     </div>
 </template>
@@ -113,8 +107,6 @@
 .slider,
 .slides {
     height:100%;
-    -webkit-transition: opacity linear 1.5s;
-    transition:opacity linear 1.5s;
     background-size: cover;
 }
 
@@ -139,6 +131,9 @@
         cursor: pointer;
     }
 
+    .slider-left {
+        left:0;
+    }
     .slider-right {
         right:0;
     }
@@ -146,11 +141,11 @@
 
 .slide {
     width:100%;
-    -webkit-transition: all linear 1.5s;
-    transition: all linear 1.5s;
-    position: absolute;
-    z-index: -1;
     opacity: 0;
+    z-index: -1;
+    -webkit-transition: opacity linear 2s;
+    transition: opacity linear 2s;
+    position: absolute;
     background-position: center;
     background-size: cover;
     left:0; right: 0; top: 0; bottom: 0;
