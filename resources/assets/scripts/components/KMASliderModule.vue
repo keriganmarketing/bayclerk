@@ -63,7 +63,7 @@
         },
 
         mounted () {
-            setInterval(() => { if(this.paused === false){ this.nextSlide() } }, 5000);
+            setInterval(() => { if(this.paused === false){ this.nextSlide() } }, 6000);
         },
 
         methods: {
@@ -123,7 +123,7 @@
     .slider-right,
     .slider-left {
         position: absolute;
-        z-index: 30;
+        z-index: 50;
         color: #FFF;
         text-shadow: 0 0 5px rgba(0,0,0,.5);
         padding: .5rem;
