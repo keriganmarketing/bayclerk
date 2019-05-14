@@ -10,9 +10,6 @@
                         'active': index == activeSlide
                     }"
                     :style="{ 'background-image': 'url(' + slide.photo.url + ')' }">
-
-                    <div class="slide-content" v-if="(slide.slide_content != '')" v-html="slide.slide_content"></div>
-                    <a class="slidelink" v-if="(slide.href != '')" :href="slide.href" :target="slide.target" ></a>
                     <div class="slide-overlay" v-if="(slide.overlay === true)"></div>
                 </div>
             </div>
@@ -142,7 +139,6 @@
 .slide {
     width:100%;
     opacity: 0;
-    z-index: -1;
     -webkit-transition: opacity linear 2s;
     transition: opacity linear 2s;
     position: absolute;
