@@ -40,7 +40,7 @@ export default {
 
     methods: {
         getChildPages() {
-            axios.get("/wp-json/wp/v2/pages?parent=" + this.post.ID + "&orderby=menu_order&order=asc&exclude[]=4&exclude[]=138")
+            axios.get("/wp-json/wp/v2/pages?parent=" + this.post.ID + "&orderby=menu_order&order=asc")
                 .then(response => {
                     this.pages = response.data;
 
@@ -61,7 +61,7 @@ export default {
         },
 
         getSiblingPages() {
-            axios.get("/wp-json/wp/v2/pages?parent=" + this.post.post_parent + "&orderby=menu_order&order=asc&per_page=30&exclude=3,24,30,32,34,36,38")
+            axios.get("/wp-json/wp/v2/pages?parent=" + this.post.post_parent + "&orderby=menu_order&order=asc&per_page=30&exclude=4,138,26,38,36,34,32,30,24,3")
                 .then(response => {
                     this.pages = response.data;
 
