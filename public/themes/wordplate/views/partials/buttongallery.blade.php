@@ -31,7 +31,7 @@
                 </a>
             </div>
             <div class="col-6 col-md-4 col-lg-3 box-button courts sizeable-element">
-                <a class="d-flex flex-column justify-content-md-center align-items-center text-center p-2" href="/court-records/court-divisions/">
+                <a class="d-flex flex-column justify-content-md-center align-items-center text-center p-2" href="/court-records/">
                     <img src="/themes/wordplate/assets/images/court-icon.png" class="img-fluid py-1 px-2" alt="form icon" aria-hidden="true">
                     <span>Court<br>Divisions</span>
                 </a>
