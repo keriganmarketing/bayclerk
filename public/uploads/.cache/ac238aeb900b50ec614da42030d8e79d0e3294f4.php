@@ -6,8 +6,8 @@
                     <div class="col col-md-auto text-white flex-grow-lg-1 border-right border-info text-lg-right">
                         <span class="date d-block h-100"><?php echo e(date('F j, Y')); ?></span>
                     </div>
-                    <a class="col-auto col-md-auto text-white border-right border-info" href="https://www.myflcourtaccess.com/" >E-FILE</a>
-                    <a class="col col-md-auto text-white" href="#" >E-RECORDING</a>
+                    <a class="col-auto col-md-auto text-white border-right border-info" target="_blank" rel="noopener noreferrer" href="https://www.myflcourtaccess.com/" >E-FILE</a>
+                    <a class="col col-md-auto text-white" href="#" target="_blank" rel="noopener noreferrer" >E-RECORDING</a>
                 </div>
             </div>
         </div>

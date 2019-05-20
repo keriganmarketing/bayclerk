@@ -236,6 +236,7 @@ body {
             color: #FFF;
             text-transform: uppercase;
             font-weight: 600;
+            text-decoration: none;
         }
         .dropdown-menu {
             display: none;
@@ -391,7 +392,7 @@ body {
         width: 100%;
         height: 100vh;
         z-index: 5;
-        color: #4184a0;
+        color: $primary;
         position: fixed;
         overflow-y: scroll;
         top: 0;
@@ -411,9 +412,10 @@ body {
         ul.navbar-nav li button,
         ul.navbar-nav li a {
             font-size: 18px;
-            color: #4184a0;
+            color: $primary;
             border-radius: 0;
             background-color: transparent;
+            text-decoration: none;
         }
     } 
 
@@ -424,7 +426,7 @@ body {
         right: 0;
         margin-top: -.4rem;
         cursor: pointer;
-        color: #4184a0;
+        color: $secondary;
     }
 
     .dropdown-menu {
@@ -583,6 +585,11 @@ main {
         .list-group-item {
             background-color: #efefef;
             border-bottom: 1px solid #fff !important;
+            text-decoration: none;
+
+            &:hover {
+                background-color: #dedede;
+            }
 
             &.active {
                 color: $primary;
