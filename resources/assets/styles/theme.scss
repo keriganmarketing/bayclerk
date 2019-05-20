@@ -526,6 +526,10 @@ main {
         padding: 2rem 1rem 1rem;
         text-align: left;
 
+        b, strong {
+            font-weight: 600 !important;
+        }
+
         header {
             margin-bottom: .25rem;
         }
@@ -545,15 +549,15 @@ main {
         }
 
         h3 {
-            font-weight: $display3-weight;
+            font-weight: 800;
         }
 
-        article li {
+        ul>li {
             margin: .5rem 0 0;
-        }
 
-        article ul>li:last-child {
-            margin-bottom: 1rem;
+            &:last-child {
+                margin-bottom: 1rem;
+            }
         }
 
         table {
