@@ -4,8 +4,13 @@
     <div class="container">
         <?php if(have_posts()): ?>
             <?php while(have_posts()): ?>
+
+                <?php echo e(the_post()); ?>
+
                 
+                <?php if(get_field('expiration_date',get_the_ID()) >= date('Ymd') || get_field('expiration_date',get_the_ID()) == ''): ?>
                 <?php echo $__env->make('partials.article', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                <?php endif; ?>
 
             <?php endwhile; ?>
         <?php else: ?>

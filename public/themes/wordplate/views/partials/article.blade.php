@@ -1,4 +1,3 @@
-{{ the_post() }}
 
 <article>
     @if(has_post_thumbnail())

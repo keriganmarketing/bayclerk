@@ -6,8 +6,12 @@
     <div class="container">
         @if (have_posts())
             @while (have_posts())
+
+                {{ the_post() }}
                 
+                @if(get_field('expiration_date',get_the_ID()) >= date('Ymd') || get_field('expiration_date',get_the_ID()) == '')
                 @include('partials.article')
+                @endif
 
             @endwhile
         @else

@@ -1,5 +1,3 @@
-<?php echo e(the_post()); ?>
-
 
 <article>
     <?php if(has_post_thumbnail()): ?>

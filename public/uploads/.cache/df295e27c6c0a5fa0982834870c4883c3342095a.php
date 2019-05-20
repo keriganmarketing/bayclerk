@@ -13,9 +13,15 @@
             
         </article>
         <?php if(!empty($results)): ?>
-            <?php $__currentLoopData = $results; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+
+            <?php while(have_posts()): ?>
+                <?php echo e(the_post()); ?>
+
+            
                 <?php echo $__env->make('partials.result', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            
+            <?php endwhile; ?>
+            
         <?php else: ?>
             <article>
                 <p>Nothing was found using the requested search criteria. Search again?</p>
