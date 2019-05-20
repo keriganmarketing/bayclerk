@@ -40,7 +40,7 @@ export default {
 
     methods: {
         getChildPages() {
-            axios.get("/wp-json/wp/v2/pages?parent=" + this.post.ID + "&orderby=menu_order&order=asc")
+            axios.get("/wp-json/wp/v2/pages?parent=" + this.post.ID + "&orderby=menu_order&order=asc&exclude[]=4&exclude[]=138")
                 .then(response => {
                     this.pages = response.data;
 
