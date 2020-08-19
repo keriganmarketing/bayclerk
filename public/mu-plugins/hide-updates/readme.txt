@@ -2,8 +2,8 @@
 Contributors: Upperdog, Gesen
 Tags: update, updates, notices, core updates, plugin updates, theme updates, 
 Requires at least: 3.0
-Tested up to: 5.1
-Stable tag: 1.1.3
+Tested up to: 5.5
+Stable tag: 1.1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Donate link: https://paypal.me/gesen
@@ -56,6 +56,17 @@ If you update WordPress core, plugin, and theme updates through remote managemen
 No, not at the moment. All updates will be hidden.
 
 == Changelog ==
+
+= 1.1.5 =
+
+* Release date: 2019-12-18
+* Minor refactoring and coding standards overhaul.
+* Align Github and WordPress.org version release numbers.
+
+= 1.1.4 =
+
+* Release date: 2019-05-28
+* Check if user is logged in before enqueuing plugin CSS. Thanks Vincent Klaiber (@vinkla) for the help! 
 
 = 1.1.3 =
 
